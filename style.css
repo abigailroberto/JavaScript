@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Oooh+Baby&family=Text+Me+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header1 {
+  font-family: "Text Me One", sans-serif;
+  font-size: 15px;
+  color: white;
+  background-color: #ab968d;
+}
+.header1 .off {
+  -webkit-animation-name: off;
+          animation-name: off;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes off {
+  50% {
+    transform: translateX(700px);
+  }
+}
+@keyframes off {
+  50% {
+    transform: translateX(700px);
+  }
+}
+
+.header2 {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  gap: 15rem;
+}
+@media screen and (max-width: 1016px) {
+  .header2 {
+    gap: 10rem;
+  }
+}
+@media screen and (max-width: 886px) {
+  .header2 {
+    gap: 5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header2 {
+    gap: 2rem;
+  }
+}
+.header2 .buscador {
+  width: 150px;
+  border-color: #6e7375;
+  border-radius: 5px;
+}
+@media screen and (max-width: 886px) {
+  .header2 .buscador {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header2 .buscador {
+    width: 60px;
+  }
+}
+.header2 .logo {
+  max-width: 20rem;
+}
+@media screen and (max-width: 1016px) {
+  .header2 .logo {
+    max-width: 15rem;
+  }
+}
+@media screen and (max-width: 886px) {
+  .header2 .logo {
+    max-width: 15rem;
+  }
+}
+@media screen and (max-width: 886px) {
+  .header2 .logo {
+    max-width: 10rem;
+  }
+}
+
+.navbar-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  font-family: "Text Me One", sans-serif;
+  font-size: 20px;
+  z-index: 1;
+}
+
+.tarjetitas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: space-around;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 1190px) {
+  .tarjetitas {
+    gap: 1rem;
+  }
+}
+.tarjetitas .card {
+  display: flex;
+  max-width: 300px;
+}
+.tarjetitas .card-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  font-family: "Text Me One", sans-serif;
+  font-size: 25px;
+  color: #6e7375;
+  font-weight: bold;
+}
+.tarjetitas .btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Text Me One", sans-serif;
+  font-size: "Oooh Baby", cursive;
+  color: #6e7375;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.tarjetitas .btn:hover {
+  color: #fff;
+}
+
+.gift {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ab968d;
+  font-size: 50px;
+  padding-top: 20px;
+  margin-top: 20px;
+  width: 100%;
+  font-family: "Oooh Baby", cursive;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  grid-gap: 15px;
+}
+.info .icono {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 50px;
+}
+.info .titulo-fmain {
+  font-size: 20px;
+  font-family: "Text Me One", sans-serif;
+  padding-top: 30px;
+}
+.info .parrafo-fmain {
+  font-size: 15px;
+  font-family: "Text Me One", sans-serif;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background-color: #ab968d;
+  padding: 20px;
+}
+footer .follow {
+  font-size: 20px;
+  font-family: "Text Me One", sans-serif;
+}
+footer .iconoInst {
+  font-size: 25px;
+  text-align: center;
+  color: #000;
+}
+footer .inst {
+  color: #000;
+}
+footer .inst:hover {
+  color: #fff;
+}
+footer .newsletter {
+  font-size: 20px;
+  font-family: "Text Me One", sans-serif;
+}
+footer .inputEmail {
+  width: 125px;
+  font-family: "Text Me One", sans-serif;
+  border-radius: 5px;
+}
+footer .inputEmail {
+  width: 125px;
+  font-family: "Text Me One", sans-serif;
+  border-radius: 5px;
+}
+footer .enviar {
+  background-color: #e4d5c8;
+  height: 30px;
+  width: 50px;
+  transition: width 2s;
+  font-family: "Text Me One", sans-serif;
+}
+footer .enviar:hover {
+  width: 80px;
+  background-color: #fff;
+}
+footer .contactenos {
+  font-family: "Text Me One", sans-serif;
+  font-size: "Text Me One", sans-serif;
+}
+footer .contacto {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Text Me One", sans-serif;
+  gap: 15px;
+}
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+  }
+  .productos .categorias {
+    list-style-type: none;
+    font-family: "Text Me One", sans-serif;
+    font-size: 20px;
+  }
+  
+  .card2 {
+    display: flex;
+    margin-inline: 50px;
+    font-family: "Text Me One", sans-serif;
+    font-size: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+.consejo-javaScript {
+    margin-left: 500px;   
+}
