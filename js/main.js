@@ -8,71 +8,96 @@ let login = true
         if (nombreUsuario != "" && emailUsuario != "" && passwdUsuario != "") {
             alert("Bienvenid@ " + nombreUsuario)
             login = false
-        }  
-        else {
+        }  else {
             alert("No se reconoce el usuario y/o constraseña. Debes ingresar todos los campos requeridos")
         }
     }
 
+const productos = [
+    { nombre: "perfumina", precio: 1550 },
+    { nombre: "cubre edredon", precio: 15500 },
+    { nombre: "almohadon liso verde", precio: 2500 },
+    { nombre: "almohadones cuadros", precio: 7500 },
+    { nombre: "jarron", precio: 3500 },
+    { nombre: "jarron pequeño", precio: 2000 },
+    { nombre: "jarra de ceramica", precio: 5000 },
+    { nombre: "lampara de mimbre", precio: 10000 },
+    { nombre: "taza de cerámica", precio: 1500 },
+    { nombre: "plato de ceramica", precio: 4500 },
+]
 
-let precioProducto = ""
+let carrito = []
 
-const mensajePrincipal = "👍¿Qué prenda deseas comprar? Ingresa la letra de la prenda requerida: \n" +
-                            "a) Almohadón liso verde \n" +
-                            "b) Jarrón \n" + 
-                            "c) Jarrón pequeño \n" +
-                            "d) Jarra de cerámica \n" +
-                            "e) Lapara de mimbre \n" +
-                            "f) Taza de cerámica \n" +
-                            "g) Perfumina \n" +
-                            "h) Plato de cerámica \n" +
-                            "i) Florero doble brazo \n" +
-                            "j) Cubre edredón \n" +
-                            "k) Almohadones cuadrados \n"
+let compra = prompt("¿Desea realizar una compra?")
 
-function preguntarPrecio() {
-    let seleccion = prompt(mensajePrincipal).toLowerCase().trim()
-    
-    if (seleccion !== "a" && seleccion !== "b" && seleccion !== "c" && seleccion !== "d" && seleccion !== "e" && seleccion !== "f" && seleccion !== "g" && seleccion !== "h" && seleccion !== "i" && seleccion !== "j" && seleccion !== "k") {
-        alert("❌La letra ingresada es incorrecto, ingrese un valor válido válido.")
-        return preguntarPrecio ()
-    } else {
-        switch(seleccion) {
-            case "a":
-                precioProducto = "El almohadón liso verde cuesta $2500"
+while(compra !== "si" && compra !=="no") {
+    alert("Debes ingresar una respuesta correcta (Si o No)")
+    compra = prompt("¿Desea realizar una compra?")
+}
+
+if (compra == "si") {
+    alert("A continuación te mostraré los productos disponibles")
+    let listaDeProductos = productos.map((producto) => producto.nombre + "" + producto.precio)
+    alert(listaDeProductos.join(" - "))
+}  else if (compra == "no") {
+    alert("Gracias por haber visitado nuestra página web")
+}
+
+while(compra != "no") {
+    let producto = prompt("Agregá un producto a tu carrito de compras") 
+    let precioProducto = 0
+
+    if (producto == "perfumina" || producto == "cubre edredon" || producto == "almohadon liso verde" || producto == "almohadones a cuadros" || producto == "jarron" || producto == "jarron pequeño" || producto == "jarra de ceramica" || producto == "lampara de mimbre" || producto == "taza de ceramica" || producto == "plato de ceramica") {
+        switch(producto) {
+            case "perfumina":
+                precioProducto = 1550
                 break
-            case "b":
-                precioProducto = "El jarrón cuesta $3500"
+            case "cubre edredon":
+                precioProducto = 15500
                 break
-            case "c":
-                precioProducto = "El jarrón pequeño $2000"
+            case "almohadon liso verde":
+                precioProducto = 2500
+            break
+            case "almohadones cuadros":
+                precioProducto = 7500
                 break
-            case "d":
-                precioProducto = "La jarra de cerámica cuesta $5000"
+            case "jarron":
+                precioProducto = 3500
                 break
-            case "e":
-                precioProducto = "La lámpara de mimbre cuesta $10000"
+            case "jarron pequeño":
+                precioProducto = 2000
                 break
-            case "f":
-                precioProducto = "La taza de cerámica cuesta $1500"
+            case "jarra de ceramica":
+                precioProducto = 5000
                 break
-            case "g":
-                precioProducto = "La perfumina cuesta $1550"
+            case "lampara de mimbre":
+                precioProducto = 10000
                 break
-            case "h":
-                precioProducto = "Cada plato de cerámica cuesta $4500"
+            case "taza de ceramica":
+                precioProducto = 1500
+                break
+            case "plato de ceramica":
+                precioProducto = 4500
                 break 
-            case "i":
-                precioProducto = "El florero doble brazo cuesta $3500"
-                break
-            case "j":
-                precioProducto = "El cubre edredón cuesta $15500"
-                break
-            case "k":
-                precioProducto = "x3 Almohadones cuadrados cuesta $7500"
-                break
-            default: 
+            default:
+                break;
         }
-        alert(precioProducto)
+    let cantidad = parseInt(prompt("Seleccione las unidades deseadas del producto seleccionado"))
+    carrito.push({producto, cantidad, precioProducto})
+    console.log(carrito)
+    } else {
+        alert("Ese producto no se encuentra en nuestra tienda")
+    }
+
+    compra = prompt("¿Quiere seguir comprando?")
+    while(compra === "no") {
+        alert("Gracias por visitar nuestra página web" , + nombreUsuario)
+        carrito.forEach((compraFinal) => {
+            console.log(`producto: ${compraFinal.producto}, cantidad: ${compraFinal.cantidad}, total ${compraFinal.cantidad * compraFinal.precioProducto}`)
+        })
+    break;
     }
 }
+
+const total = carrito.reduce((acumulador, elemento) => acumulador + elemento.precioProducto * elemento.cantidad, 0)
+console.log(`Su total es: ${total}`)  
