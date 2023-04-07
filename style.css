@@ -5,6 +5,8 @@
   box-sizing: border-box;
 }
 
+/*HEADER Y NAVBAR*/
+
 .header1 {
   font-family: "Text Me One", sans-serif;
   font-size: 15px;
@@ -53,38 +55,59 @@
     gap: 2rem;
   }
 }
+
 .header2 .buscador {
   width: 150px;
   border-color: #6e7375;
   border-radius: 5px;
 }
+
 @media screen and (max-width: 886px) {
   .header2 .buscador {
     width: 150px;
   }
 }
+
 @media screen and (max-width: 480px) {
   .header2 .buscador {
     width: 60px;
   }
 }
+
 .header2 .logo {
   max-width: 20rem;
 }
+
 @media screen and (max-width: 1016px) {
   .header2 .logo {
     max-width: 15rem;
   }
 }
+
 @media screen and (max-width: 886px) {
   .header2 .logo {
     max-width: 15rem;
   }
 }
+
 @media screen and (max-width: 886px) {
   .header2 .logo {
     max-width: 10rem;
   }
+}
+
+.shopping {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  font-size: 20px;
+}
+
+.numero {
+  color: #6e7375;
+  text-decoration: none;
+  font-family: "Text Me One", sans-serif;
+  font-size: 20px;
 }
 
 .navbar-nav {
@@ -97,87 +120,146 @@
   z-index: 1;
 }
 
-.tarjetitas {
+/*FINISH HEADER Y NAVBAR*/
+
+/*START PRODUCTOS*/
+
+.productos {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.categorias {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.btn-categorias {
+  background-color: transparent;
+  border: 0;
+  color: #6e7375;
+}
+
+.btn-categorias:hover {
+  background-color: #ab968d69;
+  border-radius: 10px;
+}
+
+.productos .categorias {
+  list-style-type: none;
+  font-family: "Text Me One", sans-serif;
+  font-size: 20px;
+}
+
+.contenedor-productos {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: space-around;
-  gap: 2rem;
+  gap: 4rem;
+  margin-inline: 50px;
+  font-family: "Text Me One", sans-serif;
+  font-size: 15px;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
-@media screen and (max-width: 1190px) {
-  .tarjetitas {
-    gap: 1rem;
-  }
+
+
+.card-body {
+  background-color: #e4d5c8;
+  text-align: center;
 }
-.tarjetitas .card {
-  display: flex;
-  max-width: 300px;
+
+.productos-agregar {
+  color: #000;
+  font-size: 18px;
+  padding-inline: 5px;
+  margin-inline: 5px;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color:#ab968d;
 }
-.tarjetitas .card-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 150px;
-  font-family: "Text Me One", sans-serif;
-  font-size: 25px;
-  color: #6e7375;
-  font-weight: bold;
-}
-.tarjetitas .btn {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: "Text Me One", sans-serif;
-  font-size: "Oooh Baby", cursive;
-  color: #6e7375;
-  font-weight: bold;
-  text-decoration: underline;
-}
-.tarjetitas .btn:hover {
+
+.productos-agregar:hover {
+  background-color:#ab968d;
   color: #fff;
 }
 
-.gift {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #ab968d;
-  font-size: 50px;
-  padding-top: 20px;
-  margin-top: 20px;
-  width: 100%;
-  font-family: "Oooh Baby", cursive;
+.productos-titulo {
+  font-size: 20px;
 }
 
-.info {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  grid-gap: 15px;
-}
-.info .icono {
+.carrito-compra {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 15px;
-  font-size: 50px;
+  gap: 1rem;
 }
-.info .titulo-fmain {
-  font-size: 20px;
+
+.carrito-compras {
+  color: #6e7375;
   font-family: "Text Me One", sans-serif;
-  padding-top: 30px;
-}
-.info .parrafo-fmain {
   font-size: 15px;
-  font-family: "Text Me One", sans-serif;
+  display: flex;
+  justify-content: start;
 }
+
+.carrito-lleno {
+  display: grid;
+  grid-template-columns: 2fr;
+  justify-content: space-around;
+  align-content: space-evenly;
+}
+
+.img-carrito {
+  width: 5rem;
+}
+
+.carrito-producto {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  flex-wrap: wrap;
+  font-family: "Text Me One", sans-serif;
+  font-size: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  color:#6e7375;
+}
+
+.btn-carrito-eliminar {
+  border: 0;
+  background-color: transparent;
+}
+.btn-carrito-eliminar:hover {
+  color: red;
+}
+
+.carrito-final {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  font-family: "Text Me One", sans-serif;
+  color:#6e7375;
+  font-size: 20px;
+}
+
+.carrito-comprar {
+  border: 0;
+  text-transform: uppercase;
+  color:#000000ab;
+  background-color: #6e737557;
+  border-radius: 5px;
+}
+
+.carrito-comprar:hover {
+  background-color: #ab968d69;
+  color:#6e7375;
+}
+
+/*START FOOTER*/
 
 footer {
   display: flex;
@@ -238,27 +320,5 @@ footer .contacto {
   font-family: "Text Me One", sans-serif;
   gap: 15px;
 }
-.productos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 1rem;
-  }
-  .productos .categorias {
-    list-style-type: none;
-    font-family: "Text Me One", sans-serif;
-    font-size: 20px;
-  }
-  
-  .card2 {
-    display: flex;
-    margin-inline: 50px;
-    font-family: "Text Me One", sans-serif;
-    font-size: 15px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-  }
 
-.consejo-javaScript {
-    margin-left: 500px;   
-}
+/*FINISH FOOTER*/
