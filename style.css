@@ -12,6 +12,7 @@
   font-size: 15px;
   color: white;
   background-color: #ab968d;
+  overflow-x: hidden;
 }
 .header1 .off {
   -webkit-animation-name: off;
@@ -105,9 +106,17 @@
 
 .numero {
   color: #6e7375;
-  text-decoration: none;
   font-family: "Text Me One", sans-serif;
+  text-decoration: none;
   font-size: 20px;
+}
+
+.numero:active {
+  color:#ab968d
+}
+
+.numero:hover {
+  color:#ab968d
 }
 
 .navbar-nav {
@@ -227,6 +236,7 @@
   color:#6e7375;
 }
 
+
 .btn-carrito-eliminar {
   border: 0;
   background-color: transparent;
@@ -257,6 +267,12 @@
 .carrito-comprar:hover {
   background-color: #ab968d69;
   color:#6e7375;
+}
+
+.carrito-vacio{
+  font-family: "Text Me One", sans-serif;
+  color:#6e7375;
+  font-size: 20px;
 }
 
 /*START FOOTER*/
