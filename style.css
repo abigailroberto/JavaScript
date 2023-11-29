@@ -5,27 +5,17 @@
   box-sizing: border-box;
 }
 
-/*HEADER Y NAVBAR*/
-
 .header1 {
   font-family: "Text Me One", sans-serif;
-  font-size: 15px;
+  font-size: "Text Me One", sans-serif;
   color: white;
   background-color: #ab968d;
   overflow-x: hidden;
 }
 .header1 .off {
-  -webkit-animation-name: off;
-          animation-name: off;
-  -webkit-animation-duration: 30s;
-          animation-duration: 30s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-@-webkit-keyframes off {
-  50% {
-    transform: translateX(700px);
-  }
+  animation-name: off;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
 }
 @keyframes off {
   50% {
@@ -56,41 +46,34 @@
     gap: 2rem;
   }
 }
-
 .header2 .buscador {
   width: 150px;
   border-color: #6e7375;
   border-radius: 5px;
 }
-
 @media screen and (max-width: 886px) {
   .header2 .buscador {
     width: 150px;
   }
 }
-
 @media screen and (max-width: 480px) {
   .header2 .buscador {
     width: 60px;
   }
 }
-
 .header2 .logo {
   max-width: 20rem;
 }
-
 @media screen and (max-width: 1016px) {
   .header2 .logo {
     max-width: 15rem;
   }
 }
-
 @media screen and (max-width: 886px) {
   .header2 .logo {
     max-width: 15rem;
   }
 }
-
 @media screen and (max-width: 886px) {
   .header2 .logo {
     max-width: 10rem;
@@ -101,22 +84,19 @@
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
-  font-size: 20px;
+  font-size: "Oooh Baby", cursive;
 }
-
-.numero {
+.shopping .numero {
   color: #6e7375;
   font-family: "Text Me One", sans-serif;
   text-decoration: none;
-  font-size: 20px;
+  font-size: "Oooh Baby", cursive;
 }
-
-.numero:active {
-  color:#ab968d
+.shopping .numero :active {
+  color: #ab968d;
 }
-
-.numero:hover {
-  color:#ab968d
+.shopping .numero :hover {
+  color: #ab968d;
 }
 
 .navbar-nav {
@@ -125,157 +105,91 @@
   justify-content: center;
   background-color: #fff;
   font-family: "Text Me One", sans-serif;
-  font-size: 20px;
+  font-size: "Oooh Baby", cursive;
   z-index: 1;
 }
 
-/*FINISH HEADER Y NAVBAR*/
-
-/*START PRODUCTOS*/
-
-.productos {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-}
-
-.categorias {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.btn-categorias {
-  background-color: transparent;
-  border: 0;
-  color: #6e7375;
-}
-
-.btn-categorias:hover {
-  background-color: #ab968d69;
-  border-radius: 10px;
-}
-
-.productos .categorias {
-  list-style-type: none;
-  font-family: "Text Me One", sans-serif;
-  font-size: 20px;
-}
-
-.contenedor-productos {
+.tarjetitas {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 4rem;
-  margin-inline: 50px;
-  font-family: "Text Me One", sans-serif;
-  font-size: 15px;
+  align-items: space-around;
+  gap: 2rem;
   flex-wrap: wrap;
-  margin-bottom: 20px;
 }
-
-
-.card-body {
-  background-color: #e4d5c8;
-  text-align: center;
+@media screen and (max-width: 1190px) {
+  .tarjetitas {
+    gap: 1rem;
+  }
 }
-
-.productos-agregar {
-  color: #000;
-  font-size: 18px;
-  padding-inline: 5px;
-  margin-inline: 5px;
-  border-radius: 10px;
-  border-width: 1px;
-  border-color:#ab968d;
+.tarjetitas .card {
+  display: flex;
+  max-width: 300px;
 }
-
-.productos-agregar:hover {
-  background-color:#ab968d;
+.tarjetitas .card-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  font-family: "Text Me One", sans-serif;
+  font-size: 25px;
+  color: #6e7375;
+  font-weight: bold;
+}
+.tarjetitas .btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Text Me One", sans-serif;
+  font-size: "Oooh Baby", cursive;
+  color: #6e7375;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.tarjetitas .btn:hover {
   color: #fff;
 }
 
-.productos-titulo {
-  font-size: 20px;
-}
-
-.carrito-compra {
+.gift {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.carrito-compras {
-  color: #6e7375;
-  font-family: "Text Me One", sans-serif;
-  font-size: 15px;
-  display: flex;
-  justify-content: start;
-}
-
-.carrito-lleno {
-  display: grid;
-  grid-template-columns: 2fr;
+  flex-direction: row;
   justify-content: space-around;
-  align-content: space-evenly;
-}
-
-.img-carrito {
-  width: 5rem;
-}
-
-.carrito-producto {
-  display: flex;
-  justify-content: space-between;
-  gap: 5rem;
-  flex-wrap: wrap;
-  font-family: "Text Me One", sans-serif;
-  font-size: 20px;
-  flex-wrap: wrap;
   align-items: center;
-  color:#6e7375;
+  background-color: #ab968d;
+  font-size: 50px;
+  padding-top: 20px;
+  margin-top: 20px;
+  width: 100%;
+  font-family: "Oooh Baby", cursive;
 }
 
-
-.btn-carrito-eliminar {
-  border: 0;
-  background-color: transparent;
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  grid-gap: 15px;
 }
-.btn-carrito-eliminar:hover {
-  color: red;
-}
-
-.carrito-final {
+.info .icono {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  padding-bottom: 2rem;
-  padding-top: 2rem;
-  font-family: "Text Me One", sans-serif;
-  color:#6e7375;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 50px;
+}
+.info .titulo-fmain {
   font-size: 20px;
-}
-
-.carrito-comprar {
-  border: 0;
-  text-transform: uppercase;
-  color:#000000ab;
-  background-color: #6e737557;
-  border-radius: 5px;
-}
-
-.carrito-comprar:hover {
-  background-color: #ab968d69;
-  color:#6e7375;
-}
-
-.carrito-vacio{
   font-family: "Text Me One", sans-serif;
-  color:#6e7375;
-  font-size: 20px;
+  padding-top: 30px;
 }
-
-/*START FOOTER*/
+.info .parrafo-fmain {
+  font-size: 15px;
+  font-family: "Text Me One", sans-serif;
+}
 
 footer {
   display: flex;
@@ -286,35 +200,43 @@ footer {
   background-color: #ab968d;
   padding: 20px;
 }
+
 footer .follow {
   font-size: 20px;
   font-family: "Text Me One", sans-serif;
 }
+
 footer .iconoInst {
   font-size: 25px;
   text-align: center;
   color: #000;
 }
+
 footer .inst {
   color: #000;
 }
+
 footer .inst:hover {
   color: #fff;
 }
+
 footer .newsletter {
   font-size: 20px;
   font-family: "Text Me One", sans-serif;
 }
+
 footer .inputEmail {
   width: 125px;
   font-family: "Text Me One", sans-serif;
   border-radius: 5px;
 }
+
 footer .inputEmail {
   width: 125px;
   font-family: "Text Me One", sans-serif;
   border-radius: 5px;
 }
+
 footer .enviar {
   background-color: #e4d5c8;
   height: 30px;
@@ -322,14 +244,17 @@ footer .enviar {
   transition: width 2s;
   font-family: "Text Me One", sans-serif;
 }
+
 footer .enviar:hover {
   width: 80px;
   background-color: #fff;
 }
+
 footer .contactenos {
   font-family: "Text Me One", sans-serif;
   font-size: "Text Me One", sans-serif;
 }
+
 footer .contacto {
   display: flex;
   flex-wrap: wrap;
@@ -337,4 +262,264 @@ footer .contacto {
   gap: 15px;
 }
 
-/*FINISH FOOTER*/
+.productos {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+.productos .categorias {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.productos .btn-categorias {
+  background-color: transparent;
+  border: 0;
+  color: #6e7375;
+}
+.productos .btn-categorias:hover {
+  background-color: rgba(171, 150, 141, 0.4117647059);
+  border-radius: 10px;
+}
+.productos.productos .categorias {
+  list-style-type: none;
+  font-family: "Text Me One", sans-serif;
+  font-size: "Oooh Baby", cursive;
+}
+.productos .contenedor-productos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 4rem;
+  margin-inline: 50px;
+  font-family: "Text Me One", sans-serif;
+  font-size: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.productos .card-body {
+  background-color: #e4d5c8;
+  text-align: center;
+}
+.productos.productos-agregar {
+  color: #000;
+  font-size: 18px;
+  padding-inline: 5px;
+  margin-inline: 5px;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: #ab968d;
+}
+.productos .productos-agregar:hover {
+  background-color: #ab968d;
+  color: #fff;
+}
+.productos.productos-titulo {
+  font-size: "Oooh Baby", cursive;
+}
+.productos .carrito-compra {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.productos .carrito-compras {
+  color: #6e7375;
+  font-family: "Text Me One", sans-serif;
+  font-size: 15px;
+  display: flex;
+  justify-content: start;
+}
+.productos .carrito-lleno {
+  display: grid;
+  grid-template-columns: 2fr;
+  justify-content: space-around;
+  align-content: space-evenly;
+}
+.productos .img-carrito {
+  width: 5rem;
+}
+.productos .carrito-producto {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  flex-wrap: wrap;
+  font-family: "Text Me One", sans-serif;
+  font-size: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  color: #6e7375;
+}
+.productos .btn-carrito-eliminar {
+  border: 0;
+  background-color: transparent;
+}
+.productos .btn-carrito-eliminar:hover {
+  color: red;
+}
+.productos .carrito-final {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  font-family: "Text Me One", sans-serif;
+  color: #6e7375;
+  font-size: 20px;
+}
+.productos .carrito-comprar {
+  border: 0;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6705882353);
+  background-color: rgba(110, 115, 117, 0.3411764706);
+  border-radius: 5px;
+}
+.productos .carrito-comprar:hover {
+  background-color: rgba(171, 150, 141, 0.4117647059);
+  color: #6e7375;
+}
+.productos .carrito-vacio {
+  font-family: "Text Me One", sans-serif;
+  color: #6e7375;
+  font-size: 20px;
+}
+
+.nosotras {
+  display: flex;
+  justify-content: center;
+  font-family: "Oooh Baby", cursive;
+  font-size: 50px;
+  color: #6e7375;
+}
+
+.sobreNosotras {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.carusel-total {
+  max-width: 50%;
+}
+.carusel-total .carusel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sobreNosotras img {
+  max-width: 80%;
+  flex-wrap: wrap;
+}
+.sobreNosotras p {
+  font-family: "Text Me One", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 15px;
+  margin-inline: 50px;
+}
+
+.tu-producto-a-medida {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tu-producto-a-medida .producto-medida {
+  font-family: "Oooh Baby", cursive;
+  font-size: 50px;
+  color: #6e7375;
+}
+.tu-producto-a-medida .producto-medida1 {
+  font-family: "Text Me One", sans-serif;
+  font-size: 20px;
+  padding-left: 15px;
+  text-align: center;
+}
+
+.detalles {
+  list-style-type: none;
+  font-family: "Text Me One", sans-serif;
+  font-size: 20px;
+  line-height: 2;
+  flex-wrap: wrap;
+  padding-inline: 15px;
+}
+.detalles .detalles-item {
+  background-color: #ab968d;
+  padding-inline: 25px;
+  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.detalles .detalles-item .pedidos {
+  margin: 10px;
+  text-align: center;
+}
+.detalles .detalles-item1 {
+  animation-delay: 0.5s;
+}
+.detalles .detalles-item2 {
+  animation-delay: 1s;
+}
+.detalles .detalles-item3 {
+  animation-delay: 1.5s;
+}
+
+.producto-medida-items {
+  list-style-image: url(../../img/logoPachiraColorChico.png);
+  line-height: 2;
+  font-family: "Text Me One", sans-serif;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  text-align: justify;
+}
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.contactoMenuP {
+  font-family: "Oooh Baby", cursive;
+  font-size: 50px;
+  text-align: center;
+  color: #6e7375;
+}
+
+.contacto-formulario {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.contacto-formulario .atencion {
+  font-family: "Text Me One", sans-serif;
+  text-align: center;
+  font-size: 20px;
+}
+.contacto-formulario .atencion .contacto {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.formulario {
+  font-family: "Text Me One", sans-serif;
+}
+.formulario .form-control {
+  width: 400px;
+}
+.formulario .enviarForm {
+  color: #fff;
+  font-family: "Text Me One", sans-serif;
+  background-color: #ab968d;
+  width: 400px;
+  margin-bottom: 15px;
+}
+.formulario .enviarForm:hover {
+  background-color: #6e7375;
+}
